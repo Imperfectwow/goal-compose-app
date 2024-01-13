@@ -9,7 +9,7 @@ Run MongoDB Container
 ---------------------
 
 docker run --name mongodb \
-  -e MONGO_INITDB_ROOT_USERNAME=max \
+  -e MONGO_INITDB_ROOT_USERNAME=root \
   -e MONGO_INITDB_ROOT_PASSWORD=secret \
   -v data:/data/db \
   --rm \
@@ -28,7 +28,7 @@ Run Node API Container
 ---------------------
 
 docker run --name goals-backend \
-  -e MONGODB_USERNAME=max \
+  -e MONGODB_USERNAME=root \
   -e MONGODB_PASSWORD=secret \
   -v logs:/app/logs \
   -v /Users/alexanderzavoloko/Dev/docker-compose/backend:/app \
